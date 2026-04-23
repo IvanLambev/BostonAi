@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { Check, ArrowRight } from 'lucide-react'
+import { ArrowRight, Check } from 'lucide-react'
+import { calendlyBookingUrl } from '@/lib/links'
 import { cn } from '@/lib/utils'
 
 const plans = [
@@ -60,63 +61,61 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-24 px-6 bg-secondary/30">
-      <div className="max-w-6xl mx-auto">
-        <p className="text-center text-sm font-semibold text-primary tracking-widest uppercase mb-4">
+    <section id="pricing" className="bg-secondary/30 px-6 py-24">
+      <div className="mx-auto max-w-6xl">
+        <p className="mb-4 text-center text-sm font-semibold uppercase tracking-widest text-primary">
           Pricing
         </p>
-        <h2 className="text-3xl sm:text-4xl font-bold text-foreground text-center text-balance mb-4">
+        <h2 className="mb-4 text-center text-balance text-3xl font-bold text-foreground sm:text-4xl">
           Simple, transparent pricing
         </h2>
-        <p className="text-center text-muted-foreground text-lg max-w-xl mx-auto mb-16 text-balance">
+        <p className="mx-auto mb-16 max-w-xl text-center text-balance text-lg text-muted-foreground">
           No per-query fees. No surprise cloud bills. A flat monthly fee for unlimited use on your
           own hardware.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+        <div className="grid grid-cols-1 items-start gap-6 md:grid-cols-3">
           {plans.map((plan) => (
             <div
               key={plan.name}
               className={cn(
-                'rounded-2xl border bg-card p-7 flex flex-col gap-6 relative',
-                plan.popular
-                  ? 'border-primary/50 ring-1 ring-primary/20'
-                  : 'border-border'
+                'relative flex flex-col gap-6 rounded-2xl border bg-card p-7',
+                plan.popular ? 'border-primary/50 ring-1 ring-primary/20' : 'border-border'
               )}
             >
               {plan.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
                   Most Popular
                 </div>
               )}
 
               <div>
-                <h3 className="font-bold text-foreground text-lg mb-0.5">{plan.name}</h3>
+                <h3 className="mb-0.5 text-lg font-bold text-foreground">{plan.name}</h3>
                 <p className="text-sm text-muted-foreground">{plan.tagline}</p>
               </div>
 
               <div className="flex items-baseline gap-1">
                 <span className="text-3xl font-bold text-foreground">{plan.price}</span>
-                {plan.period && (
-                  <span className="text-muted-foreground text-sm">{plan.period}</span>
-                )}
+                {plan.period && <span className="text-sm text-muted-foreground">{plan.period}</span>}
               </div>
 
               <p className="text-sm text-muted-foreground">{plan.description}</p>
 
-              <ul className="flex flex-col gap-2.5 flex-1">
+              <ul className="flex flex-1 flex-col gap-2.5">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-2.5 text-sm">
-                    <Check size={14} className="text-primary mt-0.5 flex-shrink-0" />
+                    <Check size={14} className="mt-0.5 flex-shrink-0 text-primary" />
                     <span className="text-foreground">{feature}</span>
                   </li>
                 ))}
               </ul>
 
               <Link
-                href="#demo"
+                href={calendlyBookingUrl}
+                target="_blank"
+                rel="noreferrer"
                 className={cn(
-                  'flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-semibold transition-colors',
+                  'flex items-center justify-center gap-2 rounded-xl py-2.5 text-sm font-semibold transition-colors',
                   plan.popular
                     ? 'bg-primary text-primary-foreground hover:bg-primary/90'
                     : 'border border-border text-foreground hover:bg-secondary'
@@ -129,9 +128,9 @@ export default function Pricing() {
           ))}
         </div>
 
-        <p className="text-center text-sm text-muted-foreground mt-8">
+        <p className="mt-8 text-center text-sm text-muted-foreground">
           All plans include hardware spec recommendations, installation support, and a 30-day
-          onboarding period. Prices shown are starting points — contact us for an exact quote.
+          onboarding period. Prices shown are starting points - contact us for an exact quote.
         </p>
       </div>
     </section>

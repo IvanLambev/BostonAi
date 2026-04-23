@@ -1,4 +1,4 @@
-import { ScanLine, GitMerge, BrainCircuit, MessageSquare } from 'lucide-react'
+import { BrainCircuit, GitMerge, MessageSquare, ScanLine } from 'lucide-react'
 
 const steps = [
   {
@@ -6,7 +6,7 @@ const steps = [
     step: '01',
     title: 'We digitize your documents',
     description:
-      'We ingest all your existing files — PDFs, scanned papers, spreadsheets, emails — and make them machine-readable. No disruption to your workflow.',
+      'We ingest all your existing files - PDFs, scanned papers, spreadsheets, emails - and make them machine-readable. No disruption to your workflow.',
   },
   {
     icon: GitMerge,
@@ -27,76 +27,79 @@ const steps = [
     step: '04',
     title: 'You chat with your own data',
     description:
-      'Ask questions in plain English. Get answers with references back to the exact document and page — instantly, accurately, privately.',
+      'Ask questions in plain English. Get answers with references back to the exact document and page - instantly, accurately, privately.',
   },
 ]
 
 export default function Solution() {
   return (
-    <section className="py-24 px-6 bg-secondary/30">
-      <div className="max-w-6xl mx-auto">
-        <p className="text-center text-sm font-semibold text-primary tracking-widest uppercase mb-4">
+    <section className="bg-secondary/30 px-6 py-24">
+      <div className="mx-auto max-w-6xl">
+        <p className="mb-4 text-center text-sm font-semibold uppercase tracking-widest text-primary">
           The Solution
         </p>
 
-        <h2 className="text-3xl sm:text-4xl font-bold text-foreground text-center text-balance mb-4">
+        <h2 className="mb-4 text-center text-balance text-3xl font-bold text-foreground sm:text-4xl">
           Your AI Assistant for Internal Knowledge
         </h2>
-        <p className="text-center text-muted-foreground text-lg max-w-2xl mx-auto mb-16 text-balance">
-          One assistant that knows everything in your practice — and answers instantly, with no cloud
-          subscription, no data risk.
+        <p className="mx-auto mb-16 max-w-2xl text-center text-balance text-lg text-muted-foreground">
+          One assistant that knows everything in your practice - and answers instantly, with no
+          cloud subscription and no data risk.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {steps.map(({ icon: Icon, step, title, description }) => (
             <div
               key={step}
-              className="rounded-2xl border border-border bg-card p-7 flex gap-5 hover:border-primary/30 transition-colors"
+              className="flex gap-5 rounded-2xl border border-border bg-card p-7 transition-colors hover:border-primary/30"
             >
-              <div className="flex flex-col items-center gap-2 flex-shrink-0">
-                <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center">
+              <div className="flex flex-shrink-0 flex-col items-center gap-2">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10">
                   <Icon size={20} className="text-primary" />
                 </div>
-                <span className="text-xs font-mono font-bold text-primary/50">{step}</span>
+                <span className="font-mono text-xs font-bold text-primary/50">{step}</span>
               </div>
               <div>
-                <h3 className="font-semibold text-foreground mb-2">{title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
+                <h3 className="mb-2 font-semibold text-foreground">{title}</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">{description}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Comparison */}
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div className="rounded-2xl border border-border bg-card p-6">
-            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-4">Before LocalMind</p>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+              Before Boston AI
+            </p>
             <ul className="flex flex-col gap-3">
               {[
                 'Open 4 different folders to find a file',
-                'Ask a colleague — they might not know',
+                'Ask a colleague - they might not know',
                 'Spend 20 min skimming PDFs manually',
                 'Give up and make a decision without full context',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2.5 text-sm text-muted-foreground">
-                  <span className="mt-0.5 w-4 h-4 rounded-full border border-border flex-shrink-0" />
+                  <span className="mt-0.5 h-4 w-4 flex-shrink-0 rounded-full border border-border" />
                   {item}
                 </li>
               ))}
             </ul>
           </div>
           <div className="rounded-2xl border border-primary/30 bg-primary/5 p-6">
-            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-4">After LocalMind</p>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-primary">
+              After Boston AI
+            </p>
             <ul className="flex flex-col gap-3">
               {[
                 'Type a question in plain English',
                 'Get the answer in under 3 seconds',
                 'See the exact source document and page',
-                'Move on — confident and informed',
+                'Move on - confident and informed',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2.5 text-sm text-foreground">
-                  <span className="mt-0.5 w-4 h-4 rounded-full bg-primary/20 border border-primary/40 flex-shrink-0 flex items-center justify-center">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                  <span className="mt-0.5 flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full border border-primary/40 bg-primary/20">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary" />
                   </span>
                   {item}
                 </li>

@@ -1,8 +1,10 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
+import { calendlyBookingUrl } from '@/lib/links'
 import { cn } from '@/lib/utils'
 
 const navLinks = [
@@ -27,28 +29,33 @@ export default function Navbar() {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         scrolled
-          ? 'bg-background/90 backdrop-blur-md border-b border-border'
+          ? 'border-b border-border bg-background/90 backdrop-blur-md'
           : 'bg-transparent'
       )}
     >
-      <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm font-mono">L</span>
+      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+        <Link href="/" className="group flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-lg border border-border bg-white shadow-sm">
+            <Image
+              src="/Boston%20ai%20help-favicon.png"
+              alt="Boston AI Help logo"
+              width={36}
+              height={36}
+              className="h-full w-full object-cover"
+              priority
+            />
           </div>
-          <span className="font-semibold text-foreground text-base tracking-tight">
-            LocalMind
+          <span className="text-base font-semibold tracking-tight text-foreground">
+            Boston AI Help
           </span>
         </Link>
 
-        {/* Desktop nav */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 {link.label}
               </Link>
@@ -56,25 +63,27 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Desktop CTA */}
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden items-center gap-3 md:flex">
           <Link
-            href="#contact"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            href={calendlyBookingUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             Contact
           </Link>
           <Link
-            href="#demo"
-            className="text-sm px-4 py-2 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
+            href={calendlyBookingUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Book a Demo
           </Link>
         </div>
 
-        {/* Mobile menu button */}
         <button
-          className="md:hidden text-foreground p-2"
+          className="p-2 text-foreground md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -82,22 +91,23 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-card border-b border-border px-6 py-4 flex flex-col gap-4">
+        <div className="flex flex-col gap-4 border-b border-border bg-card px-6 py-4 md:hidden">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
             </Link>
           ))}
           <Link
-            href="#demo"
-            className="text-sm px-4 py-2 rounded-lg bg-primary text-primary-foreground font-medium text-center hover:bg-primary/90 transition-colors"
+            href={calendlyBookingUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-lg bg-primary px-4 py-2 text-center text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             onClick={() => setMenuOpen(false)}
           >
             Book a Demo

@@ -10,14 +10,14 @@ const testimonials = [
   },
   {
     quote:
-      "The data privacy piece was non-negotiable for us. LocalMind runs on our own server — nothing goes to the cloud. My compliance officer signed off on it within a week.",
+      'The data privacy piece was non-negotiable for us. Boston AI Help runs on our own server - nothing goes to the cloud. My compliance officer signed off on it within a week.',
     name: 'Marcus Webb',
     title: 'Managing Partner, Webb & Associates CPA',
     initials: 'MW',
   },
   {
     quote:
-      "Our front desk staff had zero training in AI. After a one-hour session, they were using it daily. The interface is just chat — anyone can do it.",
+      'Our front desk staff had zero training in AI. After a one-hour session, they were using it daily. The interface is just chat - anyone can do it.',
     name: 'Dr. Priya Nair',
     title: 'Orthodontist, Nair Orthodontics Group',
     initials: 'PN',
@@ -38,7 +38,7 @@ const testimonials = [
   },
   {
     quote:
-      "The ROI was clear within the first month. We calculated we were saving roughly 3 hours of staff time per day across our two locations. That pays for itself quickly.",
+      'The ROI was clear within the first month. We calculated we were saving roughly 3 hours of staff time per day across our two locations. That pays for itself quickly.',
     name: 'Linda Park',
     title: 'Office Manager, Park & Partners Dental Group',
     initials: 'LP',
@@ -49,7 +49,7 @@ function Stars() {
   return (
     <div className="flex items-center gap-0.5">
       {Array.from({ length: 5 }).map((_, i) => (
-        <Star key={i} size={12} className="text-yellow-400 fill-yellow-400" />
+        <Star key={i} size={12} className="fill-yellow-400 text-yellow-400" />
       ))}
     </div>
   )
@@ -57,28 +57,28 @@ function Stars() {
 
 export default function Testimonials() {
   return (
-    <section className="py-24 px-6">
-      <div className="max-w-6xl mx-auto">
-        <p className="text-center text-sm font-semibold text-primary tracking-widest uppercase mb-4">
+    <section className="px-6 py-24">
+      <div className="mx-auto max-w-6xl">
+        <p className="mb-4 text-center text-sm font-semibold uppercase tracking-widest text-primary">
           Testimonials
         </p>
-        <h2 className="text-3xl sm:text-4xl font-bold text-foreground text-center text-balance mb-4">
+        <h2 className="mb-4 text-center text-balance text-3xl font-bold text-foreground sm:text-4xl">
           Trusted by practices that handle sensitive data
         </h2>
-        <p className="text-center text-muted-foreground text-lg max-w-xl mx-auto mb-16 text-balance">
-          From solo dental offices to multi-location accounting firms — here is what they say.
+        <p className="mx-auto mb-16 max-w-xl text-center text-balance text-lg text-muted-foreground">
+          From solo dental offices to multi-location accounting firms - here is what they say.
         </p>
 
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5">
+        <div className="columns-1 gap-5 space-y-5 sm:columns-2 lg:columns-3">
           {testimonials.map(({ quote, name, title, initials }) => (
             <div
               key={name}
-              className="break-inside-avoid rounded-2xl border border-border bg-card p-6 flex flex-col gap-4"
+              className="flex break-inside-avoid flex-col gap-4 rounded-2xl border border-border bg-card p-6"
             >
               <Stars />
-              <p className="text-sm text-foreground leading-relaxed">&ldquo;{quote}&rdquo;</p>
+              <p className="text-sm leading-relaxed text-foreground">&ldquo;{quote}&rdquo;</p>
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-primary/20">
                   <span className="text-xs font-bold text-primary">{initials}</span>
                 </div>
                 <div>
@@ -90,7 +90,7 @@ export default function Testimonials() {
           ))}
         </div>
 
-        <p className="text-center text-xs text-muted-foreground mt-8">
+        <p className="mt-8 text-center text-xs text-muted-foreground">
           * These testimonials are representative examples for illustrative purposes. Real customer
           references available upon request during a demo.
         </p>
