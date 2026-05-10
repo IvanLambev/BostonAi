@@ -11,37 +11,42 @@ import FinalCta from '@/components/sections/final-cta'
 import FaqSection, { homeFaqs } from '@/components/sections/faq'
 import Footer from '@/components/footer'
 import StructuredData from '@/components/seo/structured-data'
-import { absoluteUrl, siteDescription, siteName, siteOgImage, siteUrl } from '@/lib/site'
+import {
+  absoluteUrl,
+  siteDescription,
+  siteKeywords,
+  siteLogo,
+  siteName,
+  siteOgImage,
+  siteTitle,
+  siteUrl,
+} from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: 'Private AI Assistant for Dental Practices',
+  title: siteTitle,
   description: siteDescription,
-  keywords: [
-    'private AI assistant',
-    'on-premises AI assistant',
-    'AI for dental practices',
-    'document search AI',
-    'private AI for healthcare offices',
-  ],
+  keywords: siteKeywords,
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Private AI Assistant for Dental Practices | Boston AI Help',
+    title: siteTitle,
     description: siteDescription,
     url: absoluteUrl('/'),
+    siteName,
+    type: 'website',
     images: [
       {
         url: siteOgImage,
         width: 1200,
         height: 630,
-        alt: `${siteName} logo`,
+        alt: `${siteName} social preview`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Private AI Assistant for Dental Practices | Boston AI Help',
+    title: siteTitle,
     description: siteDescription,
     images: [siteOgImage],
   },
@@ -53,7 +58,7 @@ const homeSchemas = [
     '@type': 'Organization',
     name: siteName,
     url: siteUrl,
-    logo: absoluteUrl(siteOgImage),
+    logo: absoluteUrl(siteLogo),
   },
   {
     '@context': 'https://schema.org',

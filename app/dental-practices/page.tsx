@@ -6,7 +6,7 @@ import Navbar from '@/components/navbar'
 import FaqSection, { type FaqItem } from '@/components/sections/faq'
 import StructuredData from '@/components/seo/structured-data'
 import { calendlyBookingUrl } from '@/lib/links'
-import { absoluteUrl, siteName, siteOgImage, siteUrl } from '@/lib/site'
+import { absoluteUrl, dentalPracticesOgImage, siteName, siteUrl } from '@/lib/site'
 
 const dentalFaqs: FaqItem[] = [
   {
@@ -50,12 +50,14 @@ export const metadata: Metadata = {
     description:
       'Private, on-premises AI for dental practices that need instant answers from patient records and internal documents.',
     url: absoluteUrl('/dental-practices'),
+    siteName,
+    type: 'website',
     images: [
       {
-        url: siteOgImage,
+        url: dentalPracticesOgImage,
         width: 1200,
         height: 630,
-        alt: `${siteName} logo`,
+        alt: `${siteName} dental practices social preview`,
       },
     ],
   },
@@ -64,7 +66,7 @@ export const metadata: Metadata = {
     title: 'AI Assistant for Dental Practices | Boston AI Help',
     description:
       'Search patient records, scanned documents, and internal SOPs with private on-premises AI.',
-    images: [siteOgImage],
+    images: [dentalPracticesOgImage],
   },
 }
 
