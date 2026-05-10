@@ -10,13 +10,6 @@ const testimonials = [
   },
   {
     quote:
-      'The data privacy piece was non-negotiable for us. Boston AI Help runs on our own server - nothing goes to the cloud. My compliance officer signed off on it within a week.',
-    name: 'Marcus Webb',
-    title: 'Managing Partner, Webb & Associates CPA',
-    initials: 'MW',
-  },
-  {
-    quote:
       'Our front desk staff had zero training in AI. After a one-hour session, they were using it daily. The interface is just chat - anyone can do it.',
     name: 'Dr. Priya Nair',
     title: 'Orthodontist, Nair Orthodontics Group',
@@ -24,14 +17,7 @@ const testimonials = [
   },
   {
     quote:
-      'During tax season, my team used to dread client document requests. Now they pull financial summaries and prior-year returns in under a minute. Game changer.',
-    name: 'James Okafor',
-    title: 'Senior Accountant, Okafor Financial Services',
-    initials: 'JO',
-  },
-  {
-    quote:
-      "I was skeptical. We have 12 years of scanned paper files. The team digitized everything in two days and the AI found a billing error we'd missed for months.",
+      "I was skeptical. We have 12 years of scanned paper files. The team digitized everything in two days and the AI found a clinical note we'd missed for months.",
     name: 'Dr. Tom Reyes',
     title: 'Periodontist, Lakeview Dental Specialists',
     initials: 'TR',
@@ -66,7 +52,7 @@ export default function Testimonials() {
           Trusted by practices that handle sensitive data
         </h2>
         <p className="mx-auto mb-16 max-w-xl text-center text-balance text-lg text-muted-foreground">
-          From solo dental offices to multi-location accounting firms - here is what they say.
+          From solo dental offices to multi-location practices - here is what they say.
         </p>
 
         <div className="columns-1 gap-5 space-y-5 sm:columns-2 lg:columns-3">

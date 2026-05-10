@@ -228,7 +228,7 @@ export default function Hero() {
 
             <p className="mx-auto max-w-xl text-balance text-lg leading-relaxed text-muted-foreground lg:mx-0">
               We install a private AI assistant in your office that understands your patient files,
-              financial records, and internal documents - instantly.
+              treatment notes, and internal documents - instantly.
             </p>
 
             <div className="flex flex-wrap justify-center gap-6 lg:justify-start">

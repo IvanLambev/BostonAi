@@ -5,7 +5,7 @@ const problems = [
     icon: FolderOpen,
     title: 'Files are scattered everywhere',
     description:
-      'Patient records, scanned PDFs, handwritten notes, and spreadsheets are spread across folders, drives, and legacy systems with no easy way to search them.',
+      'Patient records, scanned PDFs, handwritten notes, and treatment plans are spread across folders, drives, and legacy systems with no easy way to search them.',
   },
   {
     icon: Clock,
@@ -35,8 +35,8 @@ export default function Problem() {
           {" But Can't Use It"}
         </h2>
         <p className="mx-auto mb-16 max-w-2xl text-center text-balance text-lg text-muted-foreground">
-          Most clinics and accounting firms have years of records. The information is there. It
-          just takes too long to reach it.
+          Most dental practices have years of patient records. The information is there. It just
+          takes too long to reach it.
         </p>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -60,7 +60,7 @@ export default function Problem() {
           {[
             { stat: '40%', label: 'of employee time is spent finding information' },
             { stat: '23 min', label: 'average time to locate a single document' },
-            { stat: '$15K+', label: 'lost per employee annually to inefficiency' },
+            { stat: '3 hrs', label: 'lost per team member each week to manual search' },
           ].map(({ stat, label }) => (
             <div key={stat} className="flex-1 px-6 py-2 sm:py-0">
               <p className="mb-1 text-3xl font-bold text-primary">{stat}</p>

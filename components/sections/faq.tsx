@@ -12,10 +12,10 @@ export const homeFaqs: FaqItem[] = [
   {
     question: 'Can Boston AI Help work with scanned PDFs and older documents?',
     answer:
-      'Yes. The system is designed to ingest PDFs, scanned documents, spreadsheets, and other internal files so they can be indexed and searched in plain English.',
+      'Yes. The system is designed to ingest PDFs, scanned documents, clinical notes, and other internal files so they can be indexed and searched in plain English.',
   },
   {
-    question: 'Is this a fit for sensitive patient or financial data?',
+    question: 'Is this a fit for sensitive patient data?',
     answer:
       'That is the core use case. Boston AI Help is built for teams that need fast answers from private documents without sending those records to a third-party AI cloud service.',
   },
@@ -32,7 +32,7 @@ export const homeFaqs: FaqItem[] = [
   {
     question: 'Who is Boston AI Help for?',
     answer:
-      'Right now the clearest audience is dental practices and accounting firms that need secure, local access to patient files, financial records, and internal operating documents.',
+      'Boston AI Help is for dental practices that need secure, local access to patient files, treatment records, and internal operating documents.',
   },
 ]
 

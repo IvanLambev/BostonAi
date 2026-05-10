@@ -7,7 +7,6 @@ import HowItWorks from '@/components/sections/how-it-works'
 import UseCases from '@/components/sections/use-cases'
 import Security from '@/components/sections/security'
 import Pricing from '@/components/sections/pricing'
-import Testimonials from '@/components/sections/testimonials'
 import FinalCta from '@/components/sections/final-cta'
 import FaqSection, { homeFaqs } from '@/components/sections/faq'
 import Footer from '@/components/footer'
@@ -15,21 +14,20 @@ import StructuredData from '@/components/seo/structured-data'
 import { absoluteUrl, siteDescription, siteName, siteOgImage, siteUrl } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: 'Private AI Assistant for Dental Practices & Accounting Firms',
+  title: 'Private AI Assistant for Dental Practices',
   description: siteDescription,
   keywords: [
     'private AI assistant',
     'on-premises AI assistant',
     'AI for dental practices',
-    'AI for accounting firms',
     'document search AI',
-    'private AI for business',
+    'private AI for healthcare offices',
   ],
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Private AI Assistant for Dental Practices & Accounting Firms | Boston AI Help',
+    title: 'Private AI Assistant for Dental Practices | Boston AI Help',
     description: siteDescription,
     url: absoluteUrl('/'),
     images: [
@@ -43,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Private AI Assistant for Dental Practices & Accounting Firms | Boston AI Help',
+    title: 'Private AI Assistant for Dental Practices | Boston AI Help',
     description: siteDescription,
     images: [siteOgImage],
   },
@@ -77,7 +75,7 @@ const homeSchemas = [
     },
     url: absoluteUrl('/'),
     description:
-      'Private, on-premises AI assistants for dental practices and accounting firms that need secure access to internal documents without using the cloud.',
+      'Private, on-premises AI assistants for dental practices that need secure access to patient records and internal documents without using the cloud.',
     areaServed: 'US',
   },
   {
@@ -107,7 +105,6 @@ export default function HomePage() {
         <UseCases />
         <Security />
         <Pricing />
-        <Testimonials />
         <FaqSection />
         <FinalCta />
         <Footer />

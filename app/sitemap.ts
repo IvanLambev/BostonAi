@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { absoluteUrl } from '@/lib/site'
 
-const routes = ['/', '/dental-practices', '/accounting-firms']
+const routes = ['/', '/dental-practices']
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date()

@@ -8,7 +8,6 @@ const footerLinks = [
   { label: 'Security', href: '#security' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'Dental Practices', href: '/dental-practices' },
-  { label: 'Accounting Firms', href: '/accounting-firms' },
   { label: 'Book a Demo', href: calendlyBookingUrl },
 ]
 

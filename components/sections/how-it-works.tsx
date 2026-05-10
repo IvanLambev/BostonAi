@@ -6,7 +6,7 @@ const steps = [
     number: '1',
     title: 'We ingest your documents',
     description:
-      'Our team processes all your existing files, however they are stored. PDFs, Word docs, scanned papers, and spreadsheets are all included.',
+      'Our team processes all your existing files, however they are stored. PDFs, Word docs, scanned papers, and clinical notes are all included.',
     detail: 'Typical setup: 2-3 business days',
   },
   {

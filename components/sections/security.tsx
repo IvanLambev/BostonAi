@@ -35,7 +35,7 @@ const features = [
     icon: ShieldCheck,
     title: 'HIPAA-ready architecture',
     description:
-      'Designed around HIPAA technical safeguards - access controls, audit trails, encryption, and data isolation. We recommend your compliance officer review during setup.',
+      'Designed around HIPAA technical safeguards - access controls, activity trails, encryption, and data isolation. We recommend your compliance officer review during setup.',
   },
 ]
 
@@ -52,7 +52,7 @@ export default function Security() {
           </h2>
           <p className="max-w-2xl text-balance text-lg text-muted-foreground">
             We built Boston AI Help specifically because cloud AI is not acceptable when you handle
-            patient records or client financials. Privacy is not a feature - it is the foundation.
+            patient records and clinical documents. Privacy is not a feature - it is the foundation.
           </p>
         </div>
 
@@ -81,7 +81,7 @@ export default function Security() {
             <p className="mb-1 font-semibold text-foreground">On HIPAA compliance</p>
             <p className="text-sm leading-relaxed text-muted-foreground">
               Boston AI Help is built with HIPAA technical safeguards in mind, including access
-              controls, encryption, and audit logging. However, HIPAA compliance is determined by
+              controls, encryption, and activity logging. However, HIPAA compliance is determined by
               your complete operational environment and policies. We do not certify compliance - we
               recommend working with your compliance officer or a HIPAA consultant during
               deployment.

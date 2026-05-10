@@ -137,7 +137,7 @@ const benefits = [
     icon: TimerReset,
     title: 'Reduce front-desk search time',
     description:
-      'Help the team answer common questions about recalls, billing context, and office procedures without digging through folders.',
+      'Help the team answer common questions about recalls, patient context, and office procedures without digging through folders.',
   },
 ]
 

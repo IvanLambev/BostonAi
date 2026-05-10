@@ -23,7 +23,7 @@ const plans = [
   },
   {
     name: 'Professional',
-    tagline: 'Multi-provider practices & firms',
+    tagline: 'Multi-provider dental practices',
     price: 'From $1,299',
     period: '/ month',
     description: 'Advanced features for growing teams with complex document needs.',
@@ -32,7 +32,7 @@ const plans = [
       'Unlimited documents',
       'Multi-location support',
       'Role-based access controls',
-      'Advanced audit logging',
+      'Advanced activity logging',
       'Priority support & SLA',
       'Custom integrations',
     ],
@@ -41,7 +41,7 @@ const plans = [
   },
   {
     name: 'Enterprise',
-    tagline: 'Hospital groups & large firms',
+    tagline: 'Hospital groups & large practices',
     price: 'Custom',
     period: '',
     description: 'Fully custom deployments with dedicated support and white-glove onboarding.',

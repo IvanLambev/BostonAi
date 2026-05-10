@@ -6,14 +6,14 @@ const steps = [
     step: '01',
     title: 'We digitize your documents',
     description:
-      'We ingest all your existing files - PDFs, scanned papers, spreadsheets, emails - and make them machine-readable. No disruption to your workflow.',
+      'We ingest all your existing files - PDFs, scanned papers, clinical notes, emails - and make them machine-readable. No disruption to your workflow.',
   },
   {
     icon: GitMerge,
     step: '02',
     title: 'We connect your existing systems',
     description:
-      'We integrate with the practice management or accounting software you already use, so everything speaks the same language.',
+      'We integrate with the practice management software you already use, so everything speaks the same language.',
   },
   {
     icon: BrainCircuit,
